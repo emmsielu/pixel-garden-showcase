@@ -1,60 +1,36 @@
 
 import React from "react";
-import { motion } from "framer-motion";
 
 const CV = () => (
-  <div className="container mx-auto px-4 py-12 max-w-2xl">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold mb-2 font-serif">Name Surname</h1>
-        <div className="text-xl text-primary font-serif mb-1">Job Title</div>
-        <div className="flex flex-wrap gap-2 text-base text-muted-foreground justify-center mb-2">
-          <a href="#" className="hover:text-primary underline">
-            website.com
-          </a>
-          <span className="mx-2">|</span>
-          <a href="#" className="hover:text-primary underline">
-            linkedin.com/in/username
-          </a>
-          <span className="mx-2">|</span>
-          <a href="#" className="hover:text-primary underline">
-            email@example.com
-          </a>
+  <div className="flex items-center justify-center min-h-screen bg-background px-4 py-8">
+    <div className="bg-card shadow-xl rounded-lg p-8 max-w-lg w-full space-y-8">
+      <div className="text-center">
+        <h1 className="text-3xl font-bold font-serif mb-2">Name Surname</h1>
+        <p className="text-lg text-primary mb-2">Job Title</p>
+        <div className="flex flex-wrap justify-center gap-3 text-muted-foreground text-sm">
+          <a href="#" className="hover:text-primary underline">website.com</a>
+          <span>|</span>
+          <a href="#" className="hover:text-primary underline">linkedin.com/in/username</a>
+          <span>|</span>
+          <a href="#" className="hover:text-primary underline">email@example.com</a>
         </div>
       </div>
-      <div className="space-y-10">
+      <div className="space-y-6">
         <section>
-          <h2 className="text-2xl font-bold text-primary mb-3 font-serif">Profile</h2>
-          <div className="text-base text-muted-foreground">
-            Brief summary/profile goes here. This should provide a quick introduction.
-          </div>
+          <h2 className="text-xl font-semibold font-serif text-primary mb-2">About</h2>
+          <p className="text-muted-foreground">Brief description about yourself. What do you do? What sets you apart?</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-primary mb-3 font-serif">Experience</h2>
-          <div className="text-base text-muted-foreground">
-            List your work experiences, positions held, or relevant projects here.
-          </div>
+          <h2 className="text-xl font-semibold font-serif text-primary mb-2">Experience</h2>
+          <p className="text-muted-foreground">List your relevant work experiences or projects here.</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-primary mb-3 font-serif">Education</h2>
-          <div className="text-base text-muted-foreground">
-            Detail your educational background here.
-          </div>
-        </section>
-        <section>
-          <h2 className="text-2xl font-bold text-primary mb-3 font-serif">Skills</h2>
-          <div className="text-base text-muted-foreground">
-            A list or summary of your skills can go here.
-          </div>
+          <h2 className="text-xl font-semibold font-serif text-primary mb-2">Skills</h2>
+          <p className="text-muted-foreground">Key skills and technologies go here.</p>
         </section>
       </div>
-    </motion.div>
+    </div>
   </div>
 );
 
 export default CV;
-

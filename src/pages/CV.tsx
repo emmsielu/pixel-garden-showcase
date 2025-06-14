@@ -5,7 +5,7 @@ const CV = () => (
   <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <h1 className="text-4xl font-bold text-center mb-8">Curriculum Vitae</h1>
     <section className="mb-10 max-w-3xl mx-auto">
-      <h2 className="text-xl font-semibold font-serif text-primary mb-2">
+      <h2 className="text-xl font-semibold mb-2">
         Professional Summary
       </h2>
       <p className="text-muted-foreground text-lg">
@@ -13,7 +13,7 @@ const CV = () => (
       </p>
     </section>
     <section className="mb-10 max-w-3xl mx-auto">
-      <h2 className="text-xl font-semibold font-serif text-primary mb-2">
+      <h2 className="text-xl font-semibold mb-2">
         Key Skills
       </h2>
       <ul className="list-disc list-inside text-muted-foreground text-lg space-y-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8">
@@ -25,7 +25,7 @@ const CV = () => (
       </ul>
     </section>
     <section className="mb-10 max-w-4xl mx-auto">
-      <h2 className="text-xl font-semibold font-serif text-primary mb-2">
+      <h2 className="text-xl font-semibold mb-2">
         Experience
       </h2>
       <div className="space-y-6">
@@ -46,7 +46,7 @@ const CV = () => (
       </div>
     </section>
     <section className="mb-10 max-w-3xl mx-auto">
-      <h2 className="text-xl font-semibold font-serif text-primary mb-2">
+      <h2 className="text-xl font-semibold mb-2">
         Education
       </h2>
       <ul className="space-y-3 text-muted-foreground text-lg">

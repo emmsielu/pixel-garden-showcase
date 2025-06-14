@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -55,7 +54,7 @@ const Home = () => {
 
       {/* Project Highlight Pattern */}
       <motion.div
-        className="w-full"
+        className="w-full pb-24"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}

@@ -1,6 +1,5 @@
 
-
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,9 +10,24 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Emms Bevan. All rights reserved.
           </p>
           <div className="flex space-x-4">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter /></a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Github /></a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin /></a>
+            <a
+              href="https://www.instagram.com/emmsieludraws"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/emmalucybevan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin />
+            </a>
           </div>
         </div>
       </div>

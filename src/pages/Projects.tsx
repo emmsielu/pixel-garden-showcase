@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { projects } from '@/data/projects';
@@ -39,6 +40,7 @@ const Projects = () => {
             id={project.id}
             title={project.title}
             subtitle={project.subtitle}
+            description={project.description}
             imageUrl={project.imageUrl}
           />
         ))}
@@ -48,3 +50,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

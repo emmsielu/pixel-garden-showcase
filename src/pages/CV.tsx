@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -12,7 +11,7 @@ const experience = [
     company: "Contract & Agency",
     date: "Nov 2014 – Present",
     details: [
-      "Agency-side projects for The Financial Times, Google, Sainsbury’s, BT, Nike Foundation, AstraZeneca, Guinness, and more.",
+      "Agency-side projects for The Financial Times, Google, Sainsbury's, BT, Nike Foundation, AstraZeneca, Guinness, and more.",
       "Covering interaction design, IA, user research & interviews, prototyping, UI design, pitches, and agile cycles.",
       "Long-term client-side design lead: established user research cycles, led UX/UI for 2 new SaaS platforms from pre-product discovery, and hired/directed cross-functional teams."
     ]
@@ -30,7 +29,7 @@ const experience = [
     company: "Nonsense",
     date: "Dec 2012 – Nov 2013",
     details: [
-      "All UX and client presentation for: Bacardi, SSAFA, ABF, Cancer Research, Macmillan, Friends of the Earth, The Children’s Society."
+      "All UX and client presentation for: Bacardi, SSAFA, ABF, Cancer Research, Macmillan, Friends of the Earth, The Children's Society."
     ]
   },
   {
@@ -148,7 +147,7 @@ const intro = (
   <>
     Experienced, pragmatic and creative design leader—with long-term product vision, strong technical empathy, and exceptional collaboration skills. <br />
     <br />
-    I help ambitious startups, scaleups and agencies build outstanding products and joyful user journeys, using a “whole-product” approach: research, concept, join-up, design and delivery. <br />
+    I help ambitious startups, scaleups and agencies build outstanding products and joyful user journeys, using a "whole-product" approach: research, concept, join-up, design and delivery. <br />
     <br />
     Versed in Agile ways of working and able to drive a vision through ambiguity. Deep experience in interaction design, product/UX, with strong visual skills. Friendly, collaborative and reliable.
   </>
@@ -173,12 +172,6 @@ const CV = () => {
           <h1 className="text-4xl font-bold mb-2 font-serif">
             Curriculum Vitae
           </h1>
-          <Button asChild>
-            <a href="/placeholder-cv.pdf" download>
-              <Download className="mr-2 h-4 w-4" />
-              Download CV
-            </a>
-          </Button>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-16">

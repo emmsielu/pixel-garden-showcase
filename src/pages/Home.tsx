@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import ProjectCard from "@/components/ProjectCard";
 
 // Temporary highlighted projects data
 const highlightedProjects = [
@@ -52,12 +53,7 @@ const Home = () => {
       </motion.div>
 
       {/* Project Highlight Pattern */}
-      <motion.div
-        className="w-full pb-24"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
+      <div className="w-full pb-24">
         <div className="mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Project Highlights</h2>
           <p className="text-lg text-muted-foreground text-center mb-8">
@@ -65,30 +61,19 @@ const Home = () => {
           </p>
         </div>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          {highlightedProjects.map((project, idx) => (
-            <motion.div
+          {highlightedProjects.map((project) => (
+            <ProjectCard
               key={project.id}
-              whileHover={{ scale: 1.04 }}
-              className="bg-card rounded-xl shadow transition-all duration-300 flex flex-col h-full border group"
-            >
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="w-full h-52 object-cover rounded-t-xl transition-transform group-hover:scale-105"
-              />
-              <div className="flex flex-col flex-1 p-6">
-                <h3 className="font-serif text-2xl font-bold mb-1 text-foreground">{project.title}</h3>
-                <div className="text-muted-foreground mb-2">{project.subtitle}</div>
-                <p className="text-foreground/80 mb-4 flex-1">{project.description}</p>
-                <Link to={`/projects/${project.id}`} className="mt-auto text-primary font-medium inline-flex items-center gap-1 hover:underline underline-offset-2 group-hover:text-primary">
-                  Read more
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
-            </motion.div>
+              id={project.id}
+              title={project.title}
+              subtitle={project.subtitle}
+              imageUrl={project.imageUrl}
+              description={project.description}
+              showReadMore
+            />
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

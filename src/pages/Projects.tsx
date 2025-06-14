@@ -1,8 +1,8 @@
-
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { projects } from '@/data/projects';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import ProjectCard from "@/components/ProjectCard";
 
 const Projects = () => {
   const containerVariants = {
@@ -32,34 +32,17 @@ const Projects = () => {
         </p>
       </motion.div>
 
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <motion.div key={project.id} variants={itemVariants}>
-            <Link to={`/projects/${project.id}`}>
-              <Card className="overflow-hidden h-full flex flex-col group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                <div className="overflow-hidden">
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-serif">{project.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{project.subtitle}</p>
-                </CardContent>
-              </Card>
-            </Link>
-          </motion.div>
+          <ProjectCard
+            key={project.id}
+            id={project.id}
+            title={project.title}
+            subtitle={project.subtitle}
+            imageUrl={project.imageUrl}
+          />
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };

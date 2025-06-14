@@ -183,27 +183,25 @@ const CV = () => {
               <div className="text-xl text-primary font-serif mb-2">Senior Product Designer</div>
               {/* Quick Contact */}
               <div className="flex flex-wrap gap-2 text-sm text-muted-foreground mb-4">
-                <React.Fragment>
+                <span>
                   {contactInfo.map((item, idx) =>
-                    item.url ? (
-                      <a
-                        key={item.label}
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-primary underline"
-                      >
-                        {item.value}
-                      </a>
-                    ) : (
-                      <span key={item.label}>{item.value}</span>
-                    )
-                  ).reduce((prev, curr, idx) =>
-                    idx === 0
-                      ? [curr]
-                      : [prev, <span key={`sep-${idx}`} className="mx-2">|</span>, curr]
+                    <React.Fragment key={item.label}>
+                      {idx > 0 && <span className="mx-2">|</span>}
+                      {item.url ? (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-primary underline"
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <span>{item.value}</span>
+                      )}
+                    </React.Fragment>
                   )}
-                </React.Fragment>
+                </span>
               </div>
               <div className="text-base">{intro}</div>
             </div>

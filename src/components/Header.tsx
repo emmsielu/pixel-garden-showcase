@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -23,8 +24,9 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="text-2xl font-serif font-bold text-foreground">
+          <Link to="/" className="flex items-center gap-3 text-2xl font-serif font-bold text-foreground">
             Emms Bevan
+            <span className="hidden sm:inline text-base font-semibold text-primary ml-2">Senior Product Designer</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -40,7 +42,8 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
+            <span className="text-sm font-semibold text-primary mr-3">Senior Product Designer</span>
             <button onClick={() => setIsOpen(!isOpen)} className="text-foreground">
               <Menu size={28} />
             </button>

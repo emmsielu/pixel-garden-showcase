@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -16,6 +15,7 @@ const Header = () => {
 
   const activeLinkStyle = {
     color: 'hsl(var(--primary))',
+    fontWeight: 'bold',
     // removed underline and underline offset
   };
 

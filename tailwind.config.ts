@@ -30,7 +30,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
+					DEFAULT: 'hsl(270, 60%, 60%)',             // <-- Set highlight to mid-purple
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
@@ -110,3 +110,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

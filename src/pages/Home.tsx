@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -46,7 +47,7 @@ const Home = () => {
         </p>
         <Link to="/projects">
           <Button size="lg" className="group">
-            View My Work
+            View all my projects
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </Link>
@@ -95,3 +96,4 @@ const Home = () => {
 };
 
 export default Home;
+

@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
@@ -189,7 +188,7 @@ const CV = () => {
               <div className="text-xl text-primary font-serif mb-2">Senior Product Designer</div>
               {/* Quick Contact */}
               <div className="flex flex-wrap gap-2 text-sm text-muted-foreground mb-4">
-                <>
+                <React.Fragment>
                   {contactInfo.map((item, idx) =>
                     item.url ? (
                       <a
@@ -209,7 +208,7 @@ const CV = () => {
                       ? [curr]
                       : [prev, <span key={`sep-${idx}`} className="mx-2">|</span>, curr]
                   )}
-                </>
+                </React.Fragment>
               </div>
               <div className="text-base">{intro}</div>
             </div>
@@ -283,4 +282,3 @@ const CV = () => {
 };
 
 export default CV;
-

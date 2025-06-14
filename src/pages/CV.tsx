@@ -1,9 +1,5 @@
 import React from "react";
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
-
-// Updated content extracted from the user's CV image:
+import { motion } from "framer-motion";
 
 const experience = [
   {
@@ -159,119 +155,112 @@ const otherThings = (
   </>
 );
 
-const CV = () => {
-  return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {/* Centered Page Title */}
-        <div className="flex flex-col items-center mb-12 text-center">
-          <h1 className="text-4xl font-bold mb-2 font-serif">
-            Curriculum Vitae
-          </h1>
+const CV = () => (
+  <div className="container mx-auto px-4 py-12 max-w-6xl">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Header */}
+      <div className="text-center mb-10">
+        <h1 className="text-4xl font-bold font-serif mb-2">Emma L. Bevan</h1>
+        <div className="text-xl text-primary font-serif mb-1">Senior Product Designer</div>
+        {/* Contact */}
+        <div className="flex flex-wrap gap-2 text-sm text-muted-foreground justify-center mb-2">
+          <span>
+            {contactInfo.map((item, idx) => (
+              <React.Fragment key={item.label}>
+                {idx > 0 && <span className="mx-2">|</span>}
+                {item.url ? (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary underline"
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  <span>{item.value}</span>
+                )}
+              </React.Fragment>
+            ))}
+          </span>
         </div>
-
-        <div className="flex flex-col lg:flex-row gap-16">
-          {/* Main Content */}
-          <div className="flex-1 space-y-10">
-            {/* Name + Title */}
-            <div>
-              <h2 className="text-2xl font-serif font-semibold mb-1">Emma L. Bevan</h2>
-              <div className="text-xl text-primary font-serif mb-2">Senior Product Designer</div>
-              {/* Quick Contact */}
-              <div className="flex flex-wrap gap-2 text-sm text-muted-foreground mb-4">
-                <span>
-                  {contactInfo.map((item, idx) =>
-                    <React.Fragment key={item.label}>
-                      {idx > 0 && <span className="mx-2">|</span>}
-                      {item.url ? (
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-primary underline"
-                        >
-                          {item.value}
-                        </a>
-                      ) : (
-                        <span>{item.value}</span>
-                      )}
-                    </React.Fragment>
-                  )}
-                </span>
-              </div>
-              <div className="text-base">{intro}</div>
-            </div>
-
-            {/* Experience */}
-            <section>
-              <h3 className="text-2xl font-bold border-b border-primary pb-2 mb-4">Experience</h3>
-              <div className="space-y-7">
-                {experience.map((role, idx) => (
-                  <div key={role.title + idx}>
-                    <div className="flex flex-col sm:flex-row sm:items-baseline gap-2">
-                      <span className="font-semibold text-lg">{role.title}</span>
-                      <span className="text-muted-foreground text-base ml-0 sm:ml-2">{role.company}</span>
-                      <span className="text-muted-foreground text-sm sm:ml-auto">{role.date}</span>
-                    </div>
-                    <ul className="list-disc list-inside ml-3 mt-1 text-foreground/80 space-y-1">
-                      {role.details.map((point, i) => (
-                        <li key={i}>{point}</li>
-                      ))}
-                    </ul>
+      </div>
+      {/* Layout */}
+      <div className="flex flex-col md:flex-row gap-10">
+        {/* Main Section */}
+        <div className="flex-1 space-y-10">
+          {/* Intro */}
+          <section>
+            <h2 className="text-2xl font-bold text-primary mb-3 font-serif">Profile</h2>
+            <div className="text-base">{intro}</div>
+          </section>
+          {/* Experience */}
+          <section>
+            <h2 className="text-2xl font-bold text-primary mb-3 font-serif">Experience</h2>
+            <div className="space-y-6">
+              {experience.map((role, idx) => (
+                <div key={role.title + idx}>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-1">
+                    <span className="font-semibold text-lg">{role.title}</span>
+                    <span className="text-muted-foreground text-base ml-0 sm:ml-3">{role.company}</span>
+                    <span className="text-muted-foreground text-sm sm:ml-auto">{role.date}</span>
                   </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Other things */}
-            <section>
-              <h3 className="text-xl font-semibold mt-8 mb-2 text-primary">Other things…</h3>
-              <div className="text-base">{otherThings}</div>
-            </section>
-          </div>
-
-          {/* Sidebar */}
-          <aside className="w-full lg:w-72 flex-shrink-0 space-y-8">
-            {/* Skills */}
-            <div>
-              <h4 className="text-xl font-bold border-b border-primary pb-1 mb-2">Skills</h4>
-              <ul className="text-base space-y-1">
-                {skills.map((skill, i) => (
-                  <li key={i}>{skill}</li>
-                ))}
-              </ul>
+                  <ul className="list-disc list-inside ml-5 mt-1 text-foreground/80 space-y-1">
+                    {role.details.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-            {/* Software */}
-            <div>
-              <h4 className="text-xl font-bold border-b border-primary pb-1 mb-2">Software</h4>
-              <ul className="text-base space-y-1">
-                {software.map((soft, i) => (
-                  <li key={i}>{soft}</li>
-                ))}
-              </ul>
-            </div>
-            {/* Education */}
-            <div>
-              <h4 className="text-xl font-bold border-b border-primary pb-1 mb-2">Education</h4>
-              <ul className="space-y-2">
-                {education.map((ed, i) => (
-                  <li key={i}>
-                    <div className="font-semibold">{ed.course}</div>
-                    <div className="text-muted-foreground">{ed.school}</div>
-                    <div className="text-sm">{ed.notes}</div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
+          </section>
+          {/* Other things */}
+          <section>
+            <h2 className="text-2xl font-bold text-primary mb-3 font-serif">Other</h2>
+            <div className="text-base">{otherThings}</div>
+          </section>
         </div>
-      </motion.div>
-    </div>
-  );
-};
+        {/* Sidebar */}
+        <aside className="w-full md:w-72 flex-shrink-0 space-y-8">
+          {/* Skills */}
+          <div>
+            <h3 className="text-xl font-bold border-b border-primary pb-1 mb-2">Skills</h3>
+            <ul className="text-base space-y-1">
+              {skills.map((skill, i) => (
+                <li key={i}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+          {/* Software */}
+          <div>
+            <h3 className="text-xl font-bold border-b border-primary pb-1 mb-2">Software</h3>
+            <ul className="text-base space-y-1">
+              {software.map((soft, i) => (
+                <li key={i}>{soft}</li>
+              ))}
+            </ul>
+          </div>
+          {/* Education */}
+          <div>
+            <h3 className="text-xl font-bold border-b border-primary pb-1 mb-2">Education</h3>
+            <ul className="space-y-2">
+              {education.map((ed, i) => (
+                <li key={i}>
+                  <div className="font-semibold">{ed.course}</div>
+                  <div className="text-muted-foreground">{ed.school}</div>
+                  <div className="text-sm">{ed.notes}</div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </motion.div>
+  </div>
+);
 
 export default CV;

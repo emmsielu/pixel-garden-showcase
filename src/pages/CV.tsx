@@ -1,135 +1,138 @@
+
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 
+// Updated content extracted from the user's CV image:
+
 const experience = [
   {
-    title: "Senior/ Lead Experience/ Product Designer (UX/ UI)",
-    company: "Freelance",
-    date: "Nov '14 - present",
+    title: "Freelance Senior Experience/Product Designer (UX/UI)",
+    company: "Contract & Agency",
+    date: "Nov 2014 – Present",
     details: [
-      "Worked on a wide range of agency and client-side projects for The Financial Times, Nikkei, DigitasLBi, AK/QA, Sapient, Dare, JWT, Beyond and AMV BBDO.",
-      "Covered many aspects of UX: interaction design, information architecture, prototyping, research, interviews and UI design.",
-      "Projects ranged from pitches, simple brochureware sites to complex, big-build web software for clients (Google, Nike Foundation, RBS, Sainsbury’s, AstraZeneca, Legal & General, Guinness, and more)."
+      "Agency-side projects for The Financial Times, Google, Sainsbury’s, BT, Nike Foundation, AstraZeneca, Guinness, and more.",
+      "Covering interaction design, IA, user research & interviews, prototyping, UI design, pitches, and agile cycles.",
+      "Long-term client-side design lead: established user research cycles, led UX/UI for 2 new SaaS platforms from pre-product discovery, and hired/directed cross-functional teams."
     ]
   },
   {
     title: "Experience Designer",
     company: "Bright North",
-    date: "Jan '14 - Nov '14",
+    date: "Jan 2014 – Nov 2014",
     details: [
-      "Used data insights to improve customer experience. Projects included lead XD on an eCommerce platform, a recruitment platform, and internal projects for The Guardian and Sky."
+      "Data-led UX strategy and design for e-commerce, recruitment and publisher platforms (inc. The Guardian, Sky)."
     ]
   },
   {
     title: "User Experience Designer",
     company: "Nonsense",
-    date: "Dec '12 - Nov '13",
+    date: "Dec 2012 – Nov 2013",
     details: [
-      "Responsible for all UX design and presentation to stakeholders including Bacardi global, SSAFA, ABF Soldier's Charity, Cancer Research, Macmillan, Diabetes UK, RSPCA, Friends of the Earth, The Children’s Society."
+      "All UX and client presentation for: Bacardi, SSAFA, ABF, Cancer Research, Macmillan, Friends of the Earth, The Children’s Society."
     ]
   },
   {
     title: "Associate Experience Architect",
     company: "DigitasLBi",
-    date: "Oct '11 - Dec '12",
+    date: "Oct 2011 – Dec 2012",
     details: [
-      "Worked closely with visual designers and developers to build global solutions for BT, Lloyds Bank, AstraZeneca, Turkcell, E.On."
+      "Worked closely with designers and developers to build global digital solutions for BT, Lloyds Bank, AstraZeneca, Turkcell, E.On."
     ]
   },
   {
     title: "User Experience Designer",
     company: "Spring Digital",
-    date: "Jul '11 - Oct '11",
+    date: "Jul 2011 – Oct 2011",
     details: [
-      "Sole UX, all documentation and presenting to clients for new startups."
+      "Sole UX on startup SaaS for multiple clients."
     ]
   },
   {
-    title: "PhD Candidate / PM",
+    title: "PhD (Media Arts Technology), Placement & PM",
     company: "Queen Mary University/ Inition",
-    date: "Sep '10 - Jul '11",
+    date: "Sep 2010 – Jul 2011",
     details: [
-      "Media Arts Technology PhD (full scholarship), 3-mo placement at Inition, project with BBC; developed Windows App (PhD unfinished in favor of real-world work)."
+      "Full scholarship; placement at Inition, BBC project; Windows App prototyping (PhD unfinished for industry roles)."
     ]
   },
   {
     title: "User Experience Designer",
     company: "Teachers TV",
-    date: "Jul '10 - Sep '10",
+    date: "Jul 2010 – Sep 2010",
     details: [
-      "Delivered solutions for rich media CMS features, functional specs, conducted usability interviews."
+      "Rich media CMS features, functional specs, usability interviews."
     ]
   },
   {
     title: "User Experience Designer",
     company: "Enterprise UK",
-    date: "Oct '09 - Jul '10",
+    date: "Oct 2009 – Jul 2010",
     details: [
-      "Sole UX, third-party stakeholder liaison, produced all UX work & edited visual assets for Global Entrepreneurship Week (UK/global)."
+      "Sole UX, all wireframes & visual asset editing for Global Entrepreneurship Week."
     ]
   },
   {
     title: "Multimedia Designer",
     company: "IfM, Cambridge University",
-    date: "Oct '05 - Oct '08",
+    date: "Oct 2005 – Oct 2008",
     details: [
-      "Produced graphics, print/web, motion, training documentation, video/audio for university partner in Trinidad."
+      "Graphics, print/web/motion, training docs, video/audio for university partners."
     ]
   },
   {
     title: "Freelance Visual Designer",
-    company: "Local businesses",
-    date: "May '05 - Present",
+    company: "Local Businesses",
+    date: "May 2005 – Present",
     details: [
-      "Branding, illustration, vehicle decals, 3D mockups, cards, packaging, letterheads, window frosting."
+      "Branding, illustration, decals, packaging, cards, letterheads, signage."
     ]
   }
 ];
 
 const skills = [
-  "Pitch work & strategy",
+  "Pitching & strategy",
   "Requirements gathering",
-  "Customer research interviews",
+  "User research interviews",
   "Usability interviews",
   "Complex problem solving",
   "Workshop facilitation",
-  "Personas/ Pen portraits",
-  "Storyboarding/ UJs",
+  "Personas/Pen portraits",
+  "Storyboarding",
   "Interaction diagrams",
-  "Scamper/ Sketching",
+  "Rapid ideation/sketching",
   "Hi-fi wireframes",
   "Prototyping",
-  "Formal Spec documentation",
+  "Spec documentation",
   "Branding",
   "UI Design",
-  "HTML/ CSS",
-  "Arduino/ Processing"
+  "HTML/CSS",
+  "Arduino/Processing"
 ];
 
 const software = [
   "Figma",
-  "ChatGPT",
   "Affinity Designer",
   "Photoshop",
-  "Illustrator"
+  "Illustrator",
+  "ChatGPT"
 ];
 
 const education = [
   {
     course: "MA Design for Interactive Media (Merit)",
     school: "Middlesex University",
-    notes: "Researched Emotion in HCI, built several Flash interfaces and multi-touch table for CREATE 09 conference."
+    notes: "Researched emotion in HCI, developed Flask interfaces and a multi-touch demo for CREATE 09 conference."
   },
   {
-    course: "BA (hons) Design for Interactive Media (First Class) - One year top up",
-    school: "BA (hons) Industrial Design, UWIC, Cardiff",
-    notes: "Researched Emotion in HCI, designed a remote interview platform & awarded best student."
+    course: "BA (Hons) Design for Interactive Media (1st Class, one year top-up)",
+    school: "UWIC, Cardiff",
+    notes: "Researched emotion in HCI, designed a remote interview platform & awarded best student."
   },
   {
     course: "BTEC Foundation Diploma in Art & Design (Distinction)",
     school: "Bridgend College of Technology",
-    notes: "Fine art, graphics, and fashion, specialising in 3D design."
+    notes: "Fine art, graphics, fashion. Specialised in 3D Design."
   }
 ];
 
@@ -142,13 +145,17 @@ const contactInfo = [
 
 const intro = (
   <>
-    With over 15 years working in Design, over 10 focusing on UX, and the last five working with branding, coding and product, I have a diverse background and a wide range of skills. I put a large emphasis on collaborating closely with colleagues to find the best way of working iteratively and quickly. Having worked both agency and client-side, I am fully-versed in agile project methodologies, designing device-agnostic solutions and working through the entire project cycle. I design experiences that carefully balance user, business and technology, using the most appropriate tools for the job.
+    Experienced, pragmatic and creative design leader—with long-term product vision, strong technical empathy, and exceptional collaboration skills. <br />
+    <br />
+    I help ambitious startups, scaleups and agencies build outstanding products and joyful user journeys, using a “whole-product” approach: research, concept, join-up, design and delivery. <br />
+    <br />
+    Versed in Agile ways of working and able to drive a vision through ambiguity. Deep experience in interaction design, product/UX, with strong visual skills. Friendly, collaborative and reliable.
   </>
 );
 
 const otherThings = (
   <>
-    I like to make digital experiments about visualising emotion, in Processing (and previously Flash/ AS3), trying my hand at physical computing with Arduino and painting & sketching (<a href="https://emmsielu.co.uk" className="underline" target="_blank" rel="noopener noreferrer">emmsielu.co.uk</a>); I regularly perform with several improv groups, and also love bouldering, dancing and singing really loudly when nobody’s around (or more quietly when it’s musical improv.)
+    Interested in exploring emotion through digital experiments—using Processing and Arduino. Keen sketcher and painter (<a href="https://emmsielu.co.uk" className="underline" target="_blank" rel="noopener noreferrer">emmsielu.co.uk</a>). Performer with several improv groups, boulderer, dancer, and singer (quietly or otherwise).
   </>
 );
 
@@ -161,8 +168,8 @@ const CV = () => {
         transition={{ duration: 0.5 }}
       >
         {/* Centered Page Title */}
-        <div className="flex flex-col items-center mb-12">
-          <h1 className="text-4xl font-bold text-center mb-2 font-serif">
+        <div className="flex flex-col items-center mb-12 text-center">
+          <h1 className="text-4xl font-bold mb-2 font-serif">
             Curriculum Vitae
           </h1>
           <Button asChild>
@@ -182,21 +189,27 @@ const CV = () => {
               <div className="text-xl text-primary font-serif mb-2">Senior Product Designer</div>
               {/* Quick Contact */}
               <div className="flex flex-wrap gap-2 text-sm text-muted-foreground mb-4">
-                {contactInfo.map((item, idx) =>
-                  item.url ? (
-                    <a
-                      key={item.label}
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-primary underline"
-                    >
-                      {item.value}
-                    </a>
-                  ) : (
-                    <span key={item.label}>{item.value}</span>
-                  )
-                ).reduce((prev, curr) => [prev, <span key="sep" className="mx-2">|</span>, curr])}
+                <>
+                  {contactInfo.map((item, idx) =>
+                    item.url ? (
+                      <a
+                        key={item.label}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary underline"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <span key={item.label}>{item.value}</span>
+                    )
+                  ).reduce((prev, curr, idx) =>
+                    idx === 0
+                      ? [curr]
+                      : [prev, <span key={`sep-${idx}`} className="mx-2">|</span>, curr]
+                  )}
+                </>
               </div>
               <div className="text-base">{intro}</div>
             </div>
@@ -270,3 +283,4 @@ const CV = () => {
 };
 
 export default CV;
+

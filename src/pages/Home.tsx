@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -46,9 +45,8 @@ const Home = () => {
           Crafting beautiful and functional digital experiences. I turn complex problems into elegant solutions.
         </p>
         <Link to="/projects">
-          <Button size="lg" className="group">
-            View all my projects
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          <Button size="lg" className="group font-bold">
+            View all projects
           </Button>
         </Link>
       </motion.div>
@@ -96,4 +94,3 @@ const Home = () => {
 };
 
 export default Home;
-

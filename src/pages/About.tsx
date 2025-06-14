@@ -14,7 +14,7 @@ const About = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold text-center mb-12">About Me</h1>
+        <h1 className="text-4xl font-bold text-center mb-12">About &amp; Contact</h1>
         <div className="grid md:grid-cols-5 gap-12 items-center mb-16">
           <div className="md:col-span-2">
             <img
@@ -24,7 +24,7 @@ const About = () => {
             />
           </div>
           <div className="md:col-span-3">
-            <h2 className="text-3xl font-bold mb-4">Hi, I'm John Doe.</h2>
+            <h2 className="text-3xl font-bold mb-4">Hey, I&apos;m Emms</h2>
             <p className="text-lg text-foreground/80 leading-relaxed mb-4">
               I am a passionate and results-driven designer and developer with a knack for creating engaging and user-friendly digital experiences. With over 5 years in the industry, I have honed my skills in UI/UX design, front-end development, and branding.
             </p>
@@ -38,7 +38,7 @@ const About = () => {
         </div>
 
         <div className="border-t border-border pt-16">
-          <h2 className="text-4xl font-bold text-center mb-4">Get In Touch</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">Contact</h2>
           <p className="text-xl text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             I'm currently available for freelance work. If you have a project in mind or just want to say hi, feel free to reach out.
           </p>
@@ -83,3 +83,4 @@ const About = () => {
 };
 
 export default About;
+

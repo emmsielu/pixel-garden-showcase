@@ -16,8 +16,7 @@ const Header = () => {
 
   const activeLinkStyle = {
     color: 'hsl(var(--primary))',
-    textDecoration: 'underline',
-    textUnderlineOffset: '4px',
+    // removed underline and underline offset
   };
 
   return (

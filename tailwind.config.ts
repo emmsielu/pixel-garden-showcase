@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,7 +19,8 @@ export default {
 		},
 		extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        // Swap Inter for Oxygen below
+        sans: ['Oxygen', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
       },
 			colors: {
@@ -110,4 +110,3 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-

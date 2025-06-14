@@ -42,6 +42,7 @@ const Projects = () => {
             subtitle={project.subtitle}
             description={project.description}
             imageUrl={project.imageUrl}
+            showReadMore={true}
           />
         ))}
       </div>
@@ -50,4 +51,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

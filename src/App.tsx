@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +10,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import About from "./pages/About";
 import Layout from "./components/Layout";
 import CV from "./pages/CV";
+import DesignSystem from "./pages/DesignSystem";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +27,7 @@ const App = () => (
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/cv" element={<CV />} />
+            <Route path="/design-system" element={<DesignSystem />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

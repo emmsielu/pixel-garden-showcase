@@ -31,7 +31,9 @@ const ProjectCard = ({
       />
     </div>
     <CardHeader>
-      <CardTitle className="text-2xl font-serif">{title}</CardTitle>
+      <CardTitle asChild>
+        <h3 className="font-sans text-muted-foreground text-xl font-normal">{title}</h3>
+      </CardTitle>
     </CardHeader>
     <CardContent className="flex-grow flex flex-col">
       <div className="text-muted-foreground mb-2">{subtitle}</div>
@@ -51,3 +53,4 @@ const ProjectCard = ({
 );
 
 export default ProjectCard;
+

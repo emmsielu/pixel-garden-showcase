@@ -1,4 +1,3 @@
-
 import { useParams, Link } from 'react-router-dom';
 import { projects } from '@/data/projects';
 import NotFound from './NotFound';
@@ -32,24 +31,28 @@ const ProjectDetail = () => {
 
         <img src={project.imageUrl} alt={project.title} className="w-full rounded-lg shadow-lg mb-12" />
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
+        <div className="grid grid-cols-12 gap-x-8 gap-y-12">
+          <div className="col-span-12 md:col-span-8">
             <h2 className="text-3xl font-bold mb-4">About the Project</h2>
-            <p className="text-lg text-foreground/80 leading-relaxed">{project.description}</p>
+            <div className="prose prose-lg max-w-none text-foreground/80 leading-relaxed">
+              <p>{project.description}</p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-2xl font-bold mb-4">Details</h3>
-            <ul className="space-y-2 text-lg">
-              <li><strong>Client:</strong> {project.details.client}</li>
-              <li><strong>Role:</strong> {project.details.role}</li>
-              <li><strong>Year:</strong> {project.details.year}</li>
-            </ul>
+          <div className="col-span-12 md:col-span-4">
+            <div className="sticky top-24">
+              <h3 className="text-2xl font-bold mb-4">Details</h3>
+              <ul className="space-y-2 text-lg">
+                <li><strong>Client:</strong> {project.details.client}</li>
+                <li><strong>Role:</strong> {project.details.role}</li>
+                <li><strong>Year:</strong> {project.details.year}</li>
+              </ul>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">Technologies</h3>
-            <div className="flex flex-wrap gap-2">
-              {project.details.technologies.map((tech) => (
-                <Badge key={tech} variant="secondary">{tech}</Badge>
-              ))}
+              <h3 className="text-2xl font-bold mt-8 mb-4">Technologies</h3>
+              <div className="flex flex-wrap gap-2">
+                {project.details.technologies.map((tech) => (
+                  <Badge key={tech} variant="secondary">{tech}</Badge>
+                ))}
+              </div>
             </div>
           </div>
         </div>

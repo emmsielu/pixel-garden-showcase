@@ -33,17 +33,18 @@ const Projects = () => {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-12 gap-8">
         {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            id={project.id}
-            title={project.title}
-            subtitle={project.subtitle}
-            description={project.description}
-            imageUrl={project.imageUrl}
-            showReadMore={true}
-          />
+          <motion.div key={project.id} variants={itemVariants} className="col-span-12 md:col-span-6 lg:col-span-4">
+            <ProjectCard
+              id={project.id}
+              title={project.title}
+              subtitle={project.subtitle}
+              description={project.description}
+              imageUrl={project.imageUrl}
+              showReadMore={true}
+            />
+          </motion.div>
         ))}
       </div>
     </div>

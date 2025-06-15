@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -14,15 +15,15 @@ const About = () => {
         transition={{ duration: 0.5 }}
       >
         <h1 className="text-4xl font-bold text-center mb-12">About &amp; Contact</h1>
-        <div className="grid md:grid-cols-5 gap-12 items-center mb-16">
-          <div className="md:col-span-2">
+        <div className="grid grid-cols-12 gap-12 items-center mb-16">
+          <div className="col-span-12 md:col-span-5">
             <img
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=60"
               alt="John Doe"
               className="rounded-lg shadow-xl w-full"
             />
           </div>
-          <div className="md:col-span-3">
+          <div className="col-span-12 md:col-span-7">
             <h2 className="text-3xl font-bold mb-4">Hey, I&apos;m Emms</h2>
             <p className="text-lg text-foreground/80 leading-relaxed mb-4">
               I am a passionate and results-driven designer and developer with a knack for creating engaging and user-friendly digital experiences. With over 5 years in the industry, I have honed my skills in UI/UX design, front-end development, and branding.
@@ -41,8 +42,8 @@ const About = () => {
           <p className="text-xl text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             I'm currently available for freelance work. If you have a project in mind or just want to say hi, feel free to reach out.
           </p>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
+          <div className="grid grid-cols-12 gap-x-8 gap-y-12">
+            <div className="col-span-12 md:col-span-6">
               <form className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
@@ -59,7 +60,7 @@ const About = () => {
                 <Button type="submit" size="lg">Send Message</Button>
               </form>
             </div>
-            <div className="space-y-8">
+            <div className="col-span-12 md:col-span-5 md:col-start-8 space-y-8">
               <h3 className="text-2xl font-bold">Contact Information</h3>
               <div className="flex items-center space-x-4">
                 <Mail className="h-6 w-6 text-primary" />

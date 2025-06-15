@@ -67,17 +67,18 @@ const Home = () => {
             Dive into a few standout projects from my portfolio.
           </p>
         </div>
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid gap-8 grid-cols-12">
           {highlightedProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              id={project.id}
-              title={project.title}
-              subtitle={project.subtitle}
-              imageUrl={project.imageUrl}
-              description={project.description}
-              showReadMore
-            />
+            <div key={project.id} className="col-span-12 sm:col-span-6 lg:col-span-4">
+                <ProjectCard
+                id={project.id}
+                title={project.title}
+                subtitle={project.subtitle}
+                imageUrl={project.imageUrl}
+                description={project.description}
+                showReadMore
+                />
+            </div>
           ))}
         </div>
         

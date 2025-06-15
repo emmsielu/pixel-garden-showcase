@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -14,7 +13,7 @@ const About = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold text-center mb-12">About &amp; Contact</h1>
+        <h1 className="text-5xl font-bold text-center mb-12">About &amp; Contact</h1>
         <div className="grid grid-cols-12 gap-12 items-center mb-16">
           <div className="col-span-12 md:col-span-5">
             <img
@@ -24,7 +23,7 @@ const About = () => {
             />
           </div>
           <div className="col-span-12 md:col-span-7">
-            <h2 className="text-3xl font-bold mb-4">Hey, I&apos;m Emms</h2>
+            <h2 className="text-4xl font-bold mb-4">Hey, I&apos;m Emms</h2>
             <p className="text-lg text-foreground/80 leading-relaxed mb-4">
               I am a passionate and results-driven designer and developer with a knack for creating engaging and user-friendly digital experiences. With over 5 years in the industry, I have honed my skills in UI/UX design, front-end development, and branding.
             </p>
@@ -61,7 +60,7 @@ const About = () => {
               </form>
             </div>
             <div className="col-span-12 md:col-span-5 md:col-start-8 space-y-8">
-              <h3 className="text-2xl font-bold">Contact Information</h3>
+              <h3 className="text-2xl mb-4">Contact Information</h3>
               <div className="flex items-center space-x-4">
                 <Mail className="h-6 w-6 text-primary" />
                 <span className="text-lg text-foreground/80">hello@johndoe.com</span>

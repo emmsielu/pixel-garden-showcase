@@ -27,10 +27,10 @@ const Projects = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-        <h1 className="text-4xl font-bold text-center mb-4">My Work</h1>
-        <p className="text-xl text-muted-foreground text-center mb-12">
+        <h1 className="text-5xl font-bold text-center mb-4">My Work</h1>
+        <h3 className="text-2xl text-center mb-12">
           A selection of projects that I'm proud of.
-        </p>
+        </h3>
       </motion.div>
 
       <div className="grid grid-cols-12 gap-8">

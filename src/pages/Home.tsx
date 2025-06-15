@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -49,9 +50,9 @@ const Home = () => {
         <h1 className="text-5xl md:text-7xl font-bold mb-4 text-foreground">
           Creative Designer & Developer
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8">
+        <h3 className="text-2xl max-w-3xl mx-auto mb-8">
           Crafting beautiful and functional digital experiences. I turn complex problems into elegant solutions.
-        </p>
+        </h3>
         <Link to="/projects">
           <Button size="lg" className="group font-bold">
             View all projects
@@ -62,10 +63,10 @@ const Home = () => {
       {/* Project Highlight Pattern */}
       <div className="w-full pb-24">
         <div className="mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Project Highlights</h2>
-          <p className="text-lg text-muted-foreground text-center mb-8">
+          <h2 className="text-4xl font-bold text-center mb-4">Project Highlights</h2>
+          <h3 className="text-xl text-center mb-8">
             Dive into a few standout projects from my portfolio.
-          </p>
+          </h3>
         </div>
         <div className="grid gap-8 grid-cols-12">
           {highlightedProjects.map((project) => (

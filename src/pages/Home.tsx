@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import ProjectCard from "@/components/ProjectCard";
+import ProjectsCTA from "@/components/ProjectsCTA";
 
 // Temporary highlighted projects data
 const highlightedProjects = [
@@ -31,7 +32,13 @@ const highlightedProjects = [
 
 const Home = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center min-h-[calc(100vh-13rem)]">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center min-h-[calc(100vh-13rem)] relative">
+      {/* Background triangle decorations */}
+      <div className="triangle-bg triangle-purple w-24 h-24 top-20 left-8"></div>
+      <div className="triangle-bg triangle-lime w-20 h-20 top-40 right-12"></div>
+      <div className="triangle-bg triangle-purple w-16 h-16 bottom-32 left-16"></div>
+      <div className="triangle-bg triangle-lime w-28 h-28 bottom-20 right-8"></div>
+
       {/* Header Pattern */}
       <motion.div
         className="text-center pt-8 pb-12 w-full"
@@ -73,6 +80,9 @@ const Home = () => {
             />
           ))}
         </div>
+        
+        {/* New CTA section */}
+        <ProjectsCTA />
       </div>
     </div>
   );

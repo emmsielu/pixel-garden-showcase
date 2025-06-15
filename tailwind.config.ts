@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -46,7 +47,7 @@ export default {
 					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: 'hsl(var(--accent))',
+					DEFAULT: 'hsl(84, 100%, 50%)',             // Lime green
 					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {

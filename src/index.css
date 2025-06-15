@@ -94,7 +94,8 @@
   }
 
   h3 {
-    @apply font-sans text-muted-foreground;
+    @apply font-sans text-xl font-normal;
+    color: hsl(220, 10%, 30%); /* Slightly darker grey for H3s */
   }
 }
 

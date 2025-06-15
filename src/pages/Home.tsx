@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -63,7 +62,7 @@ const Home = () => {
       {/* Project Highlight Pattern */}
       <div className="w-full pb-24">
         <div className="mb-8">
-          <h2 className="text-4xl font-bold text-center mb-4">Project Highlights</h2>
+          <h3 className="text-4xl font-bold text-center mb-4">Project Highlights</h3>
           <h3 className="text-xl text-center mb-8">
             Dive into a few standout projects from my portfolio.
           </h3>

@@ -37,10 +37,10 @@ const About = () => {
         </div>
 
         <div className="border-t border-border pt-16">
-          <h2 className="text-4xl font-bold text-center mb-4">Talk to me</h2>
-          <p className="text-xl text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+          <h3 className="text-4xl font-bold text-center mb-4">Talk to me</h3>
+          <h3 className="text-xl text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             I'm currently available for freelance work. If you have a project in mind or just want to say hi, feel free to reach out.
-          </p>
+          </h3>
           <div className="grid grid-cols-12 gap-x-8 gap-y-12">
             <div className="col-span-12 md:col-span-6">
               <form className="space-y-6">

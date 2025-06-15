@@ -21,15 +21,15 @@ const DesignSystem = () => (
 
       {/* Typography */}
       <section>
-        <h2 className="text-3xl font-bold mb-4">Typography</h2>
+        <h3 className="text-3xl font-bold mb-4">Typography</h3>
         <div className="space-y-2">
           <div>
             <label className="text-muted-foreground block mb-1">H1 (Page Title)</label>
             <h1 className="text-5xl font-bold font-serif text-primary">This is a Page Title</h1>
           </div>
           <div>
-            <label className="text-muted-foreground block mb-1">H2 (Section Heading)</label>
-            <h2 className="text-3xl font-bold font-serif text-primary">This is a Section Heading</h2>
+            <label className="text-muted-foreground block mb-1">H3 (Section Heading)</label>
+            <h3 className="text-3xl font-bold font-serif text-primary">This is a Section Heading</h3>
           </div>
           <div>
             <label className="text-muted-foreground block mb-1">H3 (Sub-heading / Card Title / Project name)</label>
@@ -48,7 +48,7 @@ const DesignSystem = () => (
 
       {/* Buttons */}
       <section>
-        <h2 className="text-3xl font-bold mb-4">Buttons</h2>
+        <h3 className="text-3xl font-bold mb-4">Buttons</h3>
         <div className="flex flex-wrap gap-4 items-end">
           <div>
             <label className="block text-sm text-muted-foreground mb-2">Primary</label>
@@ -79,7 +79,7 @@ const DesignSystem = () => (
 
       {/* Badges */}
       <section>
-        <h2 className="text-3xl font-bold mb-4">Badges</h2>
+        <h3 className="text-3xl font-bold mb-4">Badges</h3>
         <div className="flex gap-4 flex-wrap">
           <div>
             <label className="block text-sm text-muted-foreground mb-2">Default</label>
@@ -102,18 +102,18 @@ const DesignSystem = () => (
 
       {/* Form Elements */}
       <section>
-        <h2 className="text-3xl font-bold mb-4">Form Elements</h2>
+        <h3 className="text-3xl font-bold mb-4">Form Elements</h3>
         <div className="flex items-center gap-6">
           <div>
             <label className="block text-sm text-muted-foreground mb-2">Checkbox</label>
-            <Checkbox id="demo-checkbox" checked={true} readOnly />
+            <Checkbox id="demo-checkbox" checked={true} disabled />
           </div>
         </div>
       </section>
 
       {/* Cards and ProjectCard */}
       <section>
-        <h2 className="text-3xl font-bold mb-4">Cards & ProjectCard</h2>
+        <h3 className="text-3xl font-bold mb-4">Cards & ProjectCard</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm text-muted-foreground mb-2">UI Card</label>

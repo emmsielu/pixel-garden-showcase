@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
@@ -31,14 +30,13 @@ const ProjectCard = ({
       />
     </div>
     <CardHeader>
-      <CardTitle asChild>
-        <h3 className="font-sans text-muted-foreground text-xl font-normal">{title}</h3>
+      <CardTitle>
+        <h3 className="font-sans text-xl font-normal" style={{ color: "hsl(220, 10%, 30%)" }}>{title}</h3>
       </CardTitle>
     </CardHeader>
     <CardContent className="flex-grow flex flex-col">
       <div className="text-muted-foreground mb-2">{subtitle}</div>
       {description && <p className="mb-4 flex-1">{description}</p>}
-
       {showReadMore && (
         <Link
           to={`/projects/${id}`}
@@ -53,4 +51,3 @@ const ProjectCard = ({
 );
 
 export default ProjectCard;
-

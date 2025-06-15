@@ -34,7 +34,7 @@ const ProjectDetail = () => {
 
         <div className="grid grid-cols-12 gap-x-8 gap-y-12">
           <div className="col-span-12 md:col-span-8">
-            <h2 className="text-4xl font-bold mb-4">About the Project</h2>
+            <h3 className="text-4xl font-bold mb-4">About the Project</h3>
             <div className="prose prose-lg max-w-none text-foreground/80 leading-relaxed">
               <p>{project.description}</p>
             </div>
@@ -60,7 +60,7 @@ const ProjectDetail = () => {
         
         {project.details.gallery && project.details.gallery.length > 1 && (
             <div className="mt-16">
-                <h2 className="text-4xl font-bold mb-8 text-center">Gallery</h2>
+                <h3 className="text-4xl font-bold mb-8 text-center">Gallery</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {project.details.gallery.map((image, index) => (
                         <motion.div key={index} whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>

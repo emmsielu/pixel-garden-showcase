@@ -4,22 +4,20 @@ import React from "react";
 const CV = () => (
   <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <h1 className="text-5xl font-bold text-center mb-12">Curriculum Vitae</h1>
-
     <div className="grid grid-cols-12 gap-x-8">
       <div className="col-span-12 xl:col-span-10 xl:col-start-2">
         <section className="mb-12">
-          <h2 className="text-4xl font-bold mb-4">
+          <h3 className="text-4xl font-bold mb-4">
             Professional Summary
-          </h2>
+          </h3>
           <p className="text-muted-foreground text-lg leading-relaxed">
             Brief summary/profile goes here. This should provide a quick introduction with your most compelling qualifications and overall career direction.
           </p>
         </section>
-
         <section className="mb-12">
-          <h2 className="text-4xl font-bold mb-4">
+          <h3 className="text-4xl font-bold mb-4">
             Key Skills
-          </h2>
+          </h3>
           <ul className="list-disc list-inside text-muted-foreground text-lg space-y-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8">
             <li>Skill one</li>
             <li>Skill two</li>
@@ -28,11 +26,10 @@ const CV = () => (
             {/* Add more key/relevant skills as needed */}
           </ul>
         </section>
-
         <section className="mb-12">
-          <h2 className="text-4xl font-bold mb-4">
+          <h3 className="text-4xl font-bold mb-4">
             Experience
-          </h2>
+          </h3>
           <div className="space-y-8">
             {/* Example Job */}
             <div>
@@ -50,11 +47,10 @@ const CV = () => (
             {/* Add more jobs/projects as needed */}
           </div>
         </section>
-
         <section>
-          <h2 className="text-4xl font-bold mb-4">
+          <h3 className="text-4xl font-bold mb-4">
             Education
-          </h2>
+          </h3>
           <ul className="space-y-4 text-muted-foreground text-lg">
             <li>
               <h3 className="text-2xl">Degree Name</h3>
